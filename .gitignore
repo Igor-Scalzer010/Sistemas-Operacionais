@@ -1,0 +1,12 @@
+# Ignore
+/1b/*.aux
+/1b/*.fdb_latexmk
+/1b/*.fls
+/1b/*.log
+/1b/*.pdf
+/1b/*.synctex.gz
+/1b/*.toc
+
+# Ignore the settings in .vscode
+/.vscode/settings.json
+/.vscode/keybindings.json

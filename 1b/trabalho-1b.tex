@@ -1,0 +1,129 @@
+\documentclass[12pt,oneside,a4paper]{abntex2}
+
+% Pacotes básicos
+\usepackage[brazil]{babel}          % Para o idioma
+\usepackage[utf8]{inputenc}         % Permite o uso de acentos
+\usepackage[T1]{fontenc}            % Codificação da fonte
+\usepackage{graphicx}               % Inclusão de imagens
+\usepackage{amsmath}                % Para fórmulas matemáticas
+\usepackage{xcolor}                 % Para usar cores
+\usepackage{setspace}               % Para controle do espaçamento entre linhas
+\usepackage{hyperref}               % Links clicáveis
+\usepackage{indentfirst}            % Indentar o primeiro parágrafo de cada seção
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}    % Definir as margens
+% \usepackage{listings}             % Para usar uma linguagem de programação
+
+
+% Configurações de espaçamento
+\setlength{\parindent}{1.25cm}      % Define a indentação padrão
+\setlength{\parskip}{0.2cm}         % Espaçamento entre parágrafos
+\renewcommand{\baselinestretch}{1.5} % Define o espaçamento das linahs
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection. \arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Cores para links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfborder={0 0 0}
+}
+
+% Cores personalizadas para linguagem de programação
+% \lstset{
+%     language=C,                % Define a linguagem de programação
+%     basicstyle=\ttfamily,      % Define a fonte do código
+%     keywordstyle=\color{blue}, % Cor para palavras-chave
+%     commentstyle=\color{gray}, % Cor para comentários
+%     stringstyle=\color{red},   % Cor para strings
+%     numbers=left,              % Numeração de linhas à esquerda
+%     numberstyle=\tiny,         % Tamanho da fonte da numeração
+%     stepnumber=1,              % Número de linhas entre as numerações
+%     frame=single,              % Adiciona uma borda ao redor do código
+%     tabsize=4,                 % Define o tamanho da tabulação
+%     breaklines=true            % Quebra linhas longas automaticamente
+% }
+
+
+% Informações de título e autor
+\title{\huge Sistemas Operacionais}
+\author{
+    Igor Scalzer Ratti,\\
+    Marcos Macedo,\\
+    Gabriel Alcantaro,\\
+    Tailon Brandini,\\
+    Guilherme Santtos
+}
+\date{\today}
+\begin{document}
+
+% Capa
+\maketitle
+\pagestyle{plain}       % Estilo simples, com números de página no rodapé
+\pagenumbering{arabic}
+\thispagestyle{empty}
+\setcounter{page}{0}
+\setlength{\jot}{15pt}
+
+\newpage
+
+% Sumário
+\tableofcontents
+\pagenumbering{arabic}
+\thispagestyle{plain}
+\setcounter{page}{1}
+
+\newpage
+
+% Resumo do artigo
+
+\begin{resumo}
+
+    Este artigo apresenta uma visão histórica sobre a evolução dos sistemas operacionais, com foco específico nas origens e desenvolvimento dos sistemas Unics, Unix, GNU, Linux, Microsoft Windows, Apple macOS e as principais distribuições Linux. Inicialmente, é abordado o surgimento do Unics nos laboratórios Bell Labs, destacando sua importância para o desenvolvimento posterior do Unix e sua influência na computação moderna. Posteriormente, analisa-se a contribuição do Projeto GNU para o movimento de software livre, que estabeleceu fundamentos éticos e práticos fundamentais para a criação do Linux por Linus Torvalds, resultando em um sistema operacional robusto, versátil e amplamente adotado. Além disso, são discutidas as origens e estratégias comerciais que definiram a ascensão dos sistemas operacionais Microsoft Windows e Apple macOS, ressaltando suas diferentes abordagens quanto à acessibilidade, usabilidade e mercado consumidor.
+
+    \vspace{0.5cm}
+
+    \noindent \textbf{Palavra-chave:} Sistemas Operacionais. Unix. GNU. Microsoft. Apple. Distribuições Linux.
+    
+\end{resumo}
+
+\section{Introdução}
+
+O desenvolvimento dos sistemas operacionais é resultado de uma extensa trajetória histórica, que se inicia com avanços tecnológicos fundamentais nos séculos \textbf{XIX} e \textbf{XX}. Destacam-se, nesse percurso, empresas e instituições como a \textbf{Bell Labs}, \textbf{IBM}, \textbf{General Electric} e o \textbf{Massachusetts Institute of Technology (MIT)}, cujas contribuições foram essenciais para o surgimento e evolução dos sistemas operacionais modernos. A década de 1960 representou um marco significativo com o desenvolvimento dos \textbf{sistemas de tempo compartilhado (time-sharing)}, que permitiam a utilização simultânea de recursos computacionais por diversos usuários. Projetos como o \textbf{CTSS (Compatible Time-Sharing System)} e o \textbf{MULTICS (Multiplexed Information and Computing Service)} pavimentaram o caminho para a criação do sistema operacional UNIX, idealizado por \textbf{Ken Thompson} e \textbf{Dennis Ritchie} na Bell Labs. Inicialmente denominado \textbf{UNICS}, em alusão modesta ao MULTICS, o UNIX destacou-se por sua simplicidade, versatilidade e portabilidade entre computadores. Este artigo aborda o contexto histórico e tecnológico que levou ao surgimento do UNIX, enfatizando suas inovações, como a criação do sistema de arquivos e do kernel, além da transição do sistema da linguagem Assembly para a linguagem C, que conferiu maior eficiência e flexibilidade ao desenvolvimento de sistemas operacionais subsequentes.
+
+\section{Unix}
+
+O UNIX surgiu inicialmente como um projeto pessoal desenvolvido por Ken Thompson e Dennis Ritchie na Bell Labs, em resposta às complexidades e limitações encontradas no MULTICS. Inicialmente nomeado UNICS (UNiplexed Information and Computing Service), o nome fazia um trocadilho com MULTICS, indicando uma versão mais simples e prática do sistema anterior. \textbf{Em 1970, o sistema foi renomeado para UNIX}, destacando-se pela sua simplicidade, eficiência e facilidade de portabilidade entre diferentes plataformas computacionais.
+
+A criação do UNIX trouxe inovações importantes, como o desenvolvimento do sistema de arquivos, permitindo uma melhor gestão do espaço em discos, e o kernel, responsável pela intermediação entre processos e hardware. Originalmente desenvolvido na linguagem Assembly, o UNIX rapidamente migrou para linguagens de mais alto nível em busca de maior flexibilidade e facilidade de manutenção. Inicialmente, Thompson tentou utilizar Fortran e posteriormente criou uma nova linguagem chamada B, que serviu como base para o surgimento da linguagem C, desenvolvida por Dennis Ritchie. Em 1973, o sistema UNIX foi reescrito completamente em C, possibilitando uma maior acessibilidade e facilidade de uso e desenvolvimento, características que consolidaram o UNIX como um dos mais influentes sistemas operacionais da história da computação.
+
+\section{GNU}
+
+O projeto GNU surgiu em reação à crescente comercialização e restrição do acesso ao código-fonte do UNIX, contrariando a filosofia original de software aberto e livre que permeava o ambiente acadêmico dos anos 1970. \textbf{Richard Stallman}, pesquisador do MIT, tornou-se um dos principais críticos dessa mudança de paradigma, defendendo que o software deveria ser acessível, modificável e redistribuível livremente.
+
+Em 1983, Stallman anunciou formalmente o projeto \textbf{\href{https://www.gnu.org/gnu/gnu-history.html}{GNU} (GNU's Not Unix)}, com o objetivo de criar um sistema operacional completamente livre. \textbf{O GNU se posicionava como uma alternativa ao UNIX proprietário} e recuperava o espírito original de compartilhamento e colaboração científica. O projeto incluiu ferramentas essenciais, como o editor de texto GNU Emacs, o compilador GCC (GNU Compiler Collection) e o depurador GDB (GNU Debugger).
+
+Para apoiar financeiramente o projeto, \textbf{Stallman fundou, em 1985, a \href{https://www.fsf.org/about/}{Free Software Foundation} (FSF)}, entidade responsável pela manutenção e promoção do software livre. A FSF também desenvolveu a GNU General Public License (GPL), uma licença jurídica que assegura as liberdades fundamentais do software livre, estabelecendo um marco na história da computação e influenciando significativamente o desenvolvimento futuro de software aberto e colaborativo.
+
+Segundo Richard Stallman, o \textbf{software livre} garante quatro liberdades essenciais aos usuários:
+\begin{itemize}
+    \item \textbf{A liberdade de executar} um programa, independentemente de seu propósito;
+    \item \textbf{A liberdade de modificar} um programa, desde que haja acesso ao seu código-fonte;
+    \item \textbf{A liberdade de redistribuir} cópias do software, podendo ser gratuitamente ou mediante uma taxa;
+    \item \textbf{A liberdade de distribuir novas versões}, contribuindo assim para o benefício de toda a comunidade.
+\end{itemize}
+
+\section{Linux}
+
+Apesar dos avanços do Projeto GNU no desenvolvimento de ferramentas livres essenciais para um sistema operacional, o projeto enfrentava dificuldades em concluir o desenvolvimento do seu kernel, o GNU Hurd. Isso gerou uma lacuna que seria preenchida em 1991 por Linus Torvalds.
+
+Linus Torvalds, então estudante da Universidade de Helsinque, iniciou um projeto pessoal com o objetivo de criar um kernel compatível com UNIX. Esse projeto ficou conhecido como Linux. Em uma postagem no grupo de notícias \textit{comp.os.minix}, Torvalds anunciou sua iniciativa, que rapidamente atraiu a atenção de desenvolvedores de todo o mundo. O nome original do projeto seria Freix (Free Unix), mas acabou se consolidando como Linux. Ao contrário do GNU, que havia começado pelos aplicativos, Torvalds iniciou sua contribuição pelo kernel, criando assim a peça que faltava para formar um sistema operacional completamente funcional e livre.
+
+Com o kernel Linux desenvolvido por Torvalds e os aplicativos e utilitários criados pelo Projeto GNU, foi possível montar um sistema operacional completo: o \textbf{GNU/Linux}. A junção desses dois componentes permitiu que os usuários tivessem um sistema operacional livre e funcional, que se consolidou como uma alternativa viável aos sistemas proprietários. O nome \textbf{"GNU/Linux"} é defendido por Stallman e pela Free Software Foundation (FSF) como uma forma de reconhecer a contribuição substancial do projeto GNU, que constitui grande parte do sistema — incluindo ferramentas como o shell, compiladores e bibliotecas essenciais.
+
+A partir dessa base, começaram a surgir as primeiras distribuições \textbf{GNU/Linux}. A MCC Interim Linux, lançada em 1992, foi a pioneira. Em seguida vieram outras como SLS, Slackware, Debian e Red Hat, cada uma com suas particularidades e propósitos. Hoje, existem centenas de distribuições, adaptadas a diferentes contextos e necessidades, o que demonstra a versatilidade e a força da comunidade em torno do software livre. O kernel Linux continua sendo mantido por uma vasta comunidade de desenvolvedores e empresas, sob coordenação da \textbf{Linux Foundation}. Essa organização sem fins lucrativos trabalha para promover, padronizar e proteger o ecossistema Linux, garantindo sua evolução contínua e estável.
+
+
+\end{document}
