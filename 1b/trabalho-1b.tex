@@ -1,4 +1,4 @@
-G\documentclass[12pt,oneside,a4paper]{abntex2}
+\documentclass[12pt,oneside,a4paper]{abntex2}
 
 % Pacotes básicos
 \usepackage[brazil]{babel}          % Para o idioma
@@ -125,5 +125,80 @@ Com o kernel Linux desenvolvido por Torvalds e os aplicativos e utilitários cri
 
 A partir dessa base, começaram a surgir as primeiras distribuições \textbf{GNU/Linux}. A MCC Interim Linux, lançada em 1992, foi a pioneira. Em seguida vieram outras como SLS, Slackware, Debian e Red Hat, cada uma com suas particularidades e propósitos. Hoje, existem centenas de distribuições, adaptadas a diferentes contextos e necessidades, o que demonstra a versatilidade e a força da comunidade em torno do software livre. O kernel Linux continua sendo mantido por uma vasta comunidade de desenvolvedores e empresas, sob coordenação da \textbf{Linux Foundation}. Essa organização sem fins lucrativos trabalha para promover, padronizar e proteger o ecossistema Linux, garantindo sua evolução contínua e estável.
 
+\section{Exercícios de fixação}
+
+\subsection{Exercício de fixação (p.40)}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/exer.1.p40_1.jpeg}
+    \caption{Exercício de fixação 1}
+    \label{fig:print-terminal-1}
+\end{figure}
+
+Dirétorios ordenados como forme a figura \ref{fig:print-terminal-1}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/exer.1.p40_2.jpeg}
+    \caption{Exercício de fixação 1}
+    \label{fig:print-terminal-2}
+\end{figure}
+
+\clearpage
+
+\subsection{Atividade 3.2 (p.61)}
+
+\begin{enumerate}
+    \item Posicione-se em seu diretório de trabalho e crie os arquivos "exemplo1" e 
+    "exemplo2" utilizando comandos diferentes em cada caso. Ao criar um dos arquivos, entre com algumas linhas de dados pelo teclado.
+    \item Faça com que o arquivo vazio fique igual ao arquivo com conteúdo 
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/atv.3.2.jpeg}
+    \caption{Atividade 3.2 (p.61)}
+    \label{fig:print-terminal-3}
+\end{figure}
+
+Primeiramente criamos um diretório de trabalho e outro para esta questão. Em seguida entramos no diretório da questão e criamos o arquivo exemplo1 usando o \textcolor{red}{cat}, que permitiu já inserir conteúdo. Inserimos os nomes dos integrantes do grupo e em seguida salvamos com \textcolor{red}{ctrl$+$d}. Logo após, criamos o diretório "exemplo2" usando o comando \textcolor{red}{touch}. Em seguida usamos o \textcolor{red}{cp} para copiar o conteúdo de "exemplo1" para "exemplo2".
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/atv.3.2.1.jpeg}
+    \caption{Atividade 3.2 (p.61)}
+    \label{fig:print-terminal-4}
+\end{figure}
+
+Em seguida usamos \textcolor{red}{ls -l} para listar os arquivos com detalhes e em seguida usamos o comando \textcolor{red}{cat}  para listar o conteúdo dos dois arquivos (se observarmos, no exemplo1 tem todos os integrantes do grupo, porém no exemplo2 faltou o nome Alcantaro. Isso aconteceu porque não apertamos Enter após escrevermos o nome dele. O Enter salva a linha. Fizemos isso para fins didáticos).
+
+\subsubsection{Atividade 3.3 (p.61)}
+
+Atividade 3.3 - Criando diretórios e copiandos arquivos.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/atv.3.3.1.jpeg}
+    \caption{Atividade 3.3 (p.61)}
+    \label{fig:print-terminal-5}
+\end{figure}
+
+Primeiramente criamos o diretório "temp" e dentro dele o "exemplos", na raiz, através de apenas um comando, utilizando \textcolor{red}{mkdir -p ~/temp/exemplos}. Depois verificamos ser foram criados corretamente, através do \textcolor{red}{ls -R ~/temp}. Em seguida, com o comando \textcolor{red}{mv} movemos o "exemplo1" e "exemplo2" para esse novo diretório, informando o endereço completo de onde cada um estava e em seguida informando o diretório de destino, também completo.
+
+Após isso, fizemos uma cópia (\textcolor{red}{cp}) do "exemplo2", destinando-a ao diretório de origem, trabalho \texttt{trabalho/questao3\_2/.}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/atv.3.3.2.jpeg}
+    \caption{Atividade 3.3 (p.61)}
+    \label{fig:print-terminal-6}
+\end{figure}
+
+Em seguida, para fins de comprovação, listamos os arquivos dentro de \textcolor{red}{~/temp/exemplos}, e mostramos o conteúdo de exemplo1. E depois listamos o arquivo que copiamos para \texttt{trab1b/questao3\_2}, que antes possuia exemplo1 e exemplo1, e agora apenas exemplo2.
+
+\subsubsection{Atividade 3.4 (p.61)}
+
+Atividade 3.4 - empacotando e compactando arquivos
 
 \end{document}
